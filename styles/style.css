@@ -8,6 +8,25 @@ html {
   block-size: 100%;
 }
 
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+blockquote,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
 .page {
   display: flex;
   justify-content: center;
@@ -57,21 +76,14 @@ html {
   font-family: Oswald, sans-serif;
   font-size: 75px;
   font-weight: 700;
-  line-height: 70px;
+  line-height: 94%;
   text-transform: uppercase;
-  height: 210px;
 }
 
 /* Акцент заголовка в details*/
 
 .content__accent {
-  text-align: start;
   color: #545050;
-  font-family: Oswald, sans-serif;
-  font-size: 75px;
-  font-weight: 700;
-  line-height: 73px;
-  text-transform: uppercase;
 }
 
 .content__list-container {
@@ -97,7 +109,7 @@ html {
   display: flex;
   flex-direction: column;
   width: 399px;
-  gap: 26px;
+  gap: 24px;
 }
 
 .content__video-card {
@@ -141,7 +153,7 @@ html {
 
 .content__video-card-description {
   color: #fff;
-  font-family: "Fira Sans Condensed",sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 15px;
@@ -187,15 +199,14 @@ html {
 .search-form__textfield {
   width: 225px;
   border: 0px solid transparent;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
   background-color: transparent;
   color: #fff;
   appearance: none;
   font-family: inherit;
   font-size: inherit;
   line-height: 22px;
-  height: 27px;
 }
 
 .search-form__textfield::placeholder {
@@ -265,9 +276,10 @@ html {
 .button {
   font-family: inherit;
   font-size: inherit;
+  font-weight: bold;
   color: inherit;
   background-color: transparent;
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   min-height: 34px;
   cursor: pointer;
 }
@@ -281,6 +293,10 @@ html {
 }
 
 .content__card-link:active {
+  background-color: #545050;
+}
+
+.content__card-link_current {
   background-color: #545050;
 }
 
@@ -316,25 +332,6 @@ html {
 
 .more-button {
   width: 100%;
-}
-
-h1,
-h2,
-h3,
-h4,
-p,
-ul,
-ol,
-li,
-blockquote,
-fieldset {
-  margin: 0;
-  padding: 0;
-}
-
-ul,
-ol {
-  list-style: none;
 }
 
 /* Кастомный скроллбар */
